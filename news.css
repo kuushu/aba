@@ -1,0 +1,619 @@
+/* News Page Specific Styles */
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #0a0a0a;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    position: relative;
+    z-index: 2;
+    padding: 25px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+ 
+header img {
+    max-width: 200px;
+    height: auto;
+}
+ 
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    letter-spacing: 2px;
+}
+ 
+nav {
+    display: flex;
+    gap: 40px;
+}
+ 
+nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    letter-spacing: 1px;
+    transition: opacity 0.3s;
+}
+ 
+nav a:hover {
+    opacity: 0.7;
+}
+ 
+.header-right {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+ 
+.btn-outline {
+    padding: 10px 18px;
+    border: 1px solid white;
+    border-radius: 6px;
+    text-decoration: none;
+    color: white;
+    font-size: 13px;
+    transition: 0.3s;
+}
+ 
+.btn-outline:hover {
+    background: white;
+    color: black;
+}
+ 
+.login {
+    color: white;
+    text-decoration: none;
+}
+
+/* Featured Hero Section */
+
+.featured-hero-section {
+    height: 70vh;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.8)), 
+                url('images/741.webp');
+    background-size: cover;
+    background-position: top center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 60px 80px;
+    position: relative;
+}
+
+.featured-badge {
+    position: absolute;
+    top: 60px;
+    right: 80px;
+    background-color: rgba(128, 128, 128, 0.8);
+    color: #fff;
+    padding: 8px 16px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.featured-hero-date {
+    color: #ffffff;
+    font-size: 14px;
+    letter-spacing: 1px;
+    margin-bottom: -30px;
+    text-transform: uppercase;
+}
+
+.featured-hero-title {
+    font-size: 72px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    line-height: 1.1;
+}
+
+.featured-read-more {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.featured-read-more::after {
+    content: '→';
+    font-size: 18px;
+}
+
+/* News Tabs */
+
+.news-tabs {
+    display: flex;
+    padding: 0 80px;
+    margin-top: -1px;
+}
+
+.news-tab {
+    background-color: #2a2a2a;
+    color: #fff;
+    border: none;
+    padding: 18px 50px;
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.news-tab.active {
+    background-color: #1a1a1a;
+}
+
+.news-tab:not(.active) {
+    background-color: #333;
+    color: #888;
+}
+
+.news-tab:hover:not(.active) {
+    background-color: #3a3a3a;
+}
+
+/* News Cards Grid */
+
+.news-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding: 60px 80px;
+    background-color: #0a0a0a;
+}
+
+.news-article-card {
+    background-color: #1a1a1a;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    transition: transform 0.3s;
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,0.1);
+    transition: 0.15s;
+}
+
+.news-article-card:hover {
+    transform: translateY(-5px);
+}
+
+.news-article-image {
+    width: 100%;
+    height: 280px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,0.1);
+    transition: 0.15s;
+}
+
+.news-article-card-1 .news-article-image {
+    background:
+                url('images/news1.jpg');
+                background-size: cover;
+                background-position: center;
+}
+
+.news-article-card-2 .news-article-image {
+    background:
+                url('images/news2.jpg');
+                background-size: cover;
+                background-position: center;
+}
+
+.news-article-card-3 .news-article-image {
+    background: 
+                url('images/news3.jpg');
+                background-size: cover;
+                background-position: center;
+}
+
+.news-article-card-4 .news-article-image {
+    background:
+                url('images/741.webp');
+                background-size: cover;
+                background-position: top center;
+}
+
+.news-article-card-5 .news-article-image {
+    background:                 
+                url('images/news5.jpg');
+                background-size: cover;
+                background-position: top center;
+}
+
+.news-article-card-6 .news-article-image {
+    background:
+                url('images/news6.jpg');
+                background-size: cover;
+                background-position: top center;
+}
+
+
+.news-article-content {
+    padding: 20px;
+}
+
+.news-article-date {
+    color: #888;
+    font-size: 11px;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
+
+.news-article-title {
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-top: 10px;
+    color: #fff;
+}
+
+.news-article-text {
+    font-size: 13px;
+    opacity: 1;
+    line-height: 1.5;
+    margin-top: -9px;
+}
+
+/* Responsive Design */
+
+@media (max-width: 1200px) {
+    .news-cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .featured-hero-section {
+        padding: 40px 30px;
+    }
+
+    .featured-hero-title {
+        font-size: 48px;
+    }
+
+    .news-tabs {
+        padding: 0 30px;
+    }
+
+    .news-cards-grid {
+        grid-template-columns: 1fr;
+        padding: 40px 30px;
+    }
+
+    .featured-badge {
+        right: 30px;
+        top: 40px;
+    }
+}
+
+/* --- FOOTER STYLES --- */
+.main-footer {
+    width: 100%;
+    background-color: #000000;
+    color: #808080;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers everything horizontally */
+    justify-content: center;
+}
+
+.brand-row {
+    display: flex;
+    align-items: center; /* Centers logos vertically against each other */
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 25px;
+    width: 100%;
+}
+
+/* Legal Text */
+.legal-text {
+    max-width: 600px;
+    text-align: center;
+    font-size: 13px;
+    line-height: 1.5;
+    padding: 0 20px;
+    opacity: 0.7;
+    letter-spacing: 0.5px;
+}
+
+/* адаптивность */
+ 
+/* до 1200px */
+@media (max-width: 1200px) {
+    .news-grid {
+        gap: 30px;
+    }
+    
+    .news-card {
+        width: calc(33.333% - 20px);
+    }
+    
+    .heroes-content {
+        width: 95%;
+    }
+    
+    .find-your-hero {
+        font-size: 80px;
+    }
+}
+ 
+/* до 992px */
+@media (max-width: 992px) {
+    header {
+        padding: 20px 40px;
+    }
+    
+    header img {
+        max-width: 150px;
+    }
+    
+    nav {
+        gap: 25px;
+    }
+    
+    nav a {
+        font-size: 12px;
+    }
+    
+    .hero-content {
+        padding: 0 40px 100px;
+    }
+    
+    .hero-title {
+        font-size: 48px;
+    }
+    
+    .find-your-hero {
+        font-size: 60px;
+    }
+    
+    .find-your-hero-description {
+        font-size: 18px;
+    }
+    
+    .news-grid {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .news-card {
+        width: 100%;
+    }
+    
+    .news-section {
+        padding: 0 40px 40px;
+    }
+    
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+ 
+/* до 768px */
+@media (max-width: 768px) {
+    header {
+        padding: 15px 20px;
+        flex-wrap: nowrap;
+        gap: 10px;
+    }
+    
+    header img {
+        max-width: 100px;
+        flex-shrink: 0;
+    }
+    
+    .logo {
+        font-size: 20px;
+    }
+    
+    .header-right {
+        gap: 10px;
+        flex-shrink: 0;
+    }
+    
+    .btn-outline {
+        padding: 8px 14px;
+        font-size: 11px;
+        white-space: nowrap;
+    }
+    
+    .login {
+        display: none;
+    }
+    
+    .hero-content {
+        padding: 0 30px 80px;
+    }
+    
+    .hero-title {
+        font-size: 36px;
+    }
+    
+    .find-your-hero {
+        font-size: 48px;
+    }
+    
+    .find-your-hero-description {
+        font-size: 16px;
+    }
+    
+    .hero-search {
+        flex-wrap: wrap;
+        height: auto;
+        padding: 15px;
+        gap: 10px;
+    }
+    
+    .filter-text,
+    .roster-text {
+        left: 0;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .category-one-piece {
+        margin-left: 0;
+    }
+    
+    .category-fate {
+        margin-right: 0;
+    }
+    
+    .hero-search-background {
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    .heroes-content {
+        width: 90%;
+    }
+    
+    .news-section {
+        padding: 0 30px 30px;
+    }
+}
+ 
+/* до 576px */
+@media (max-width: 576px) {
+    header {
+        padding: 12px 15px;
+    }
+    
+    header img {
+        max-width: 80px;
+    }
+    
+    .logo {
+        font-size: 18px;
+    }
+    
+    .btn-outline {
+        padding: 6px 10px;
+        font-size: 10px;
+    }
+    
+    .hero-content {
+        padding: 0 20px 60px;
+    }
+    
+    .hero-title {
+        font-size: 28px;
+    }
+    
+    .author {
+        font-size: 14px;
+    }
+    
+    .btn-primary {
+        padding: 12px 24px;
+        font-size: 12px;
+    }
+    
+    .find-your-hero {
+        font-size: 36px;
+    }
+    
+    .find-your-hero-description {
+        font-size: 14px;
+        padding: 0 10px;
+    }
+    
+    .hero-search {
+        margin-top: 80px;
+    }
+    
+    .heroes-content {
+        width: 95%;
+    }
+    
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+    
+    .news-section {
+        padding: 0 20px 20px;
+    }
+    
+    .news-card img {
+        height: 150px;
+    }
+    
+    .legal-text {
+        font-size: 11px;
+    }
+    
+    .aba-logo {
+        width: 150px;
+        height: 45px;
+    }
+}
+ 
+/* до 400px */
+@media (max-width: 400px) {
+    header {
+        padding: 10px 12px;
+    }
+    
+    header img {
+        max-width: 70px;
+    }
+    
+    .logo {
+        font-size: 16px;
+    }
+    
+    .btn-outline {
+        padding: 5px 8px;
+        font-size: 9px;
+    }
+    
+    .hero-title {
+        font-size: 24px;
+    }
+    
+    .find-your-hero {
+        font-size: 28px;
+    }
+    
+    .find-your-hero-description {
+        font-size: 13px;
+    }
+    
+    .filter-text {
+        font-size: 16px;
+    }
+    
+    .roster-text {
+        font-size: 13px;
+    }
+    
+    .category-one-piece,
+    .category-dragon-ball-z,
+    .category-naruto,
+    .category-bleach,
+    .category-fate {
+        width: 36px;
+        height: 28px;
+    }
+}
